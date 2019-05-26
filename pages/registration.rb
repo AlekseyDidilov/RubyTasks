@@ -3,6 +3,9 @@ require_relative 'base'
 
 
 class RegistrationPage < BasePage
+  def loaded?
+    "Register Account".include? @browser.title
+  end
   def fill_personal_details(first_name, last_name, email, telephone )
     first_name_field = @browser.find_element(:id, "input-firstname")
     first_name_field.send_keys first_name
@@ -34,7 +37,7 @@ class RegistrationSuccessPage <BasePage
   def open
     raise RuntimeError "This page could not be open trough url"
   end
-  def loaded
+  def loaded?
     "Your Account Has Been Created!".include? @browser.title
   end
 end
