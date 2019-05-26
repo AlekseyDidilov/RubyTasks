@@ -1,5 +1,6 @@
 require 'selenium-webdriver'
 
+
 class BasePage
   def initialize(browser)
     @browser = browser
