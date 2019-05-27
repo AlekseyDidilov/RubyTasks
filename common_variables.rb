@@ -1,8 +1,9 @@
-module CommonVariables
+require 'yaml'
 
+module CommonVariables
+  #Opencart url
   URL = 'http://new-website.zzz.com.ua/index.php?route=account/register'
 
   #user_credentials
-  EMAIL = 'alex123@gmail.com'
-  PASSWORD = '1234Wlkj'
+  CREDENTIALS = YAML.load_file('./setting_examples/credentials.yml')
 end

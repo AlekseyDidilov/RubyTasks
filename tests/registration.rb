@@ -63,13 +63,14 @@ describe "Registration new user Scenario" do
 
   context "using invalid data " do
 
+    #before running this test, please add real credentials in the ./setting_example/credentials.yml
     it "user should not be registered after sending form with existed email" do
       registration = RegistrationPage.new(@browser)
       registration.open(@url)
       registration.fill_personal_details(
           @first_name,
           @last_name,
-          CommonVariables::EMAIL,
+          CommonVariables::CREDENTIALS['website']['opencart']['email'],
           @password
       )
       registration.fill_password(@password)
