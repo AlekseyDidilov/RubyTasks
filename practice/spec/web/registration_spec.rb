@@ -1,8 +1,8 @@
 require 'faker'
 require 'rspec'
-require_relative '../pages/registration'
-require_relative '../pages/decision'
-require_relative '../common_variables'
+require_relative '../../../practice/ruby/selenium/pages/registration'
+require_relative '../../../practice/ruby/selenium/pages/decision'
+require_relative '../../../practice/ruby/selenium/common_variables'
 
 
 describe "Registration new user Scenario" do
