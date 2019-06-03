@@ -2,7 +2,6 @@ module SERVICES
   STOPPED = 'STOPPED'.freeze
   RUNNING = 'RUNNING'.freeze
 
-
   def self.service_status(service_name)
     status_output = `SC query #{service_name}`
     if status_output.include?(RUNNING)
