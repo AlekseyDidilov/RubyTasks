@@ -32,5 +32,3 @@ describe 'Regex pattern' do
     expect(matches).to eq 3
   end
 end
-
-p Dir.home
